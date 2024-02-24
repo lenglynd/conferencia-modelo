@@ -32,5 +32,3 @@
     <script src="/build/js/main.min.js" defer></script>
 </body>
 </html>
-git config --global user.email "lenglyn@gmail.com"
-  git config --global user.name "lenglynd"
