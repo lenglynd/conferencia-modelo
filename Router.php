@@ -51,7 +51,7 @@ class Router
 
         //utiñizar el laypout segun el url
         $url_actual = $_SERVER['PATH_INFO'] ?? '/';
-        if (str_contains($url_actual, '/admin')) {
+        if (str_contains($currentUrl, '/admin')) {
             
             include_once __DIR__ . '/views/admin-layout.php';
         }else {
