@@ -22,7 +22,7 @@
             })();
         }
         async function obtenerPonentes() {
-            const url = `/api/ponentes`;
+            const url = `${location.origin}/api/ponentes`;
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
             formatearPonentes(resultado);
@@ -30,7 +30,7 @@
             
         }
         async function obtenerPonente(id) {
-            const url = `/api/ponente?id=${id}`;
+            const url = `${location.origin}/api/ponente?id=${id}`;
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
             

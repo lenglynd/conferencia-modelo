@@ -5,7 +5,7 @@
     if (ctx) {
         obtenerDatos();
         async function obtenerDatos() {
-            const url = '/api/regalo';
+            const url = `${location.origin}/api/regal`;
             const respuesta = await fetch(url);
             const resultado = await respuesta.json();
             new Chart(ctx, {
