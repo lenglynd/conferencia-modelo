@@ -46,12 +46,12 @@ class Router
         ob_start(); 
 
         include_once __DIR__ . "/views/$view.php";
-
         $contenido = ob_get_clean(); // Limpia el Buffer
-
+     
         //utiñizar el laypout segun el url
-        $url_actual = $_SERVER['PATH_INFO'] ?? '/';
-        if (str_contains($url_actual, '/admin')) {
+        $currentUrl = strtok($_SERVER['REQUEST_URI'], '?') ?? '/';
+        
+        if (str_contains($currentUrl, '/admin')) {
             
             include_once __DIR__ . '/views/admin-layout.php';
         }else {
